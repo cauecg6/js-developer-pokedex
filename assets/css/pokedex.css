@@ -84,6 +84,11 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
+}
+
+.pokemon:hover {
+    filter: brightness(1.05);
 }
 
 .pokemon .number {
@@ -161,5 +166,63 @@
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.toolbar-search {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: .5rem;
+}
+
+.toolbar-search input {
+    flex: 1;
+    padding: .5rem .75rem;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    font-size: .875rem;
+}
+
+.toolbar-search button {
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #6c79db;
+    color: #fff;
+    font-size: .875rem;
+    cursor: pointer;
+}
+
+.toolbar-filter {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
+    font-size: .875rem;
+}
+
+.toolbar-filter select {
+    flex: 1;
+    padding: .5rem;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    font-size: .875rem;
+}
+
+.loading,
+.error-message {
+    text-align: center;
+    font-size: .875rem;
+    margin: .5rem 0;
+}
+
+.error-message {
+    color: #bf3029;
+}
+
+@media screen and (min-width: 576px) {
+    .toolbar-search,
+    .toolbar-filter {
+        max-width: 480px;
     }
 }
